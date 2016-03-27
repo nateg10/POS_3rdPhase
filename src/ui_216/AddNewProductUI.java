@@ -24,6 +24,7 @@ public class AddNewProductUI extends javax.swing.JFrame {
     
     private AddNewProductUI() {
         initComponents();
+        //will this work??
     }
 
     /**
