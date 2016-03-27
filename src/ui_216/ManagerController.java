@@ -11,11 +11,11 @@ public class ManagerController {
     }
     
     public void newProduct(){
-        MsUI.spawnNewProductWindow();
+        AddNewProductUI np = new AddNewProductUI(this);
     }
     
     public void updateProduct(){
-        MsUI.spawnUpdateProductWindow();
+        UpdateProductUI up = new UpdateProductUI(this);
     }
     
     
