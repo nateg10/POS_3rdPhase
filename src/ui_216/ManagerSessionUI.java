@@ -21,8 +21,8 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         //this();
         controller = mc;
         initComponents();
-        updateProductFrame.setVisible(false);
-        addNewProductFrame.setVisible(false);
+        //updateProductFrame.setVisible(false);
+        //addNewProductFrame.setVisible(false);
     }
     
 //    private ManagerSessionUI() {
@@ -34,6 +34,58 @@ public class ManagerSessionUI extends javax.swing.JFrame {
     }
     
     public void spawnUpdateProductWindow(){
+//        updateProductFrame.setVisible(false);
+//        updateProductFrame = new javax.swing.JInternalFrame("Balls", true, true, true, true);
+
+        updateProductFrame = new javax.swing.JInternalFrame();
+        updateProductLabel = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel3 = new javax.swing.JPanel();
+        submitUpdate = new javax.swing.JButton();
+        
+        updateProductFrame.setResizable(true);
+        updateProductFrame.setVisible(true);
+
+        updateProductLabel.setText("Update Product");
+
+        submitUpdate.setText("Submit");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(144, Short.MAX_VALUE)
+                .addComponent(submitUpdate)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(217, Short.MAX_VALUE)
+                .addComponent(submitUpdate)
+                .addContainerGap())
+        );
+
+        jScrollPane3.setViewportView(jPanel3);
+
+        javax.swing.GroupLayout updateProductFrameLayout = new javax.swing.GroupLayout(updateProductFrame.getContentPane());
+        updateProductFrame.getContentPane().setLayout(updateProductFrameLayout);
+        updateProductFrameLayout.setHorizontalGroup(
+            updateProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(updateProductFrameLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(updateProductLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+        updateProductFrameLayout.setVerticalGroup(
+            updateProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(updateProductFrameLayout.createSequentialGroup()
+                .addComponent(updateProductLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+        );
         updateProductFrame.setVisible(true);
     }
 
@@ -101,7 +153,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
+                .addContainerGap(245, Short.MAX_VALUE)
                 .addComponent(submitNew)
                 .addContainerGap())
         );
@@ -125,9 +177,12 @@ public class ManagerSessionUI extends javax.swing.JFrame {
             .addGroup(addNewProductFrameLayout.createSequentialGroup()
                 .addComponent(addNewProductLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
         );
 
+        updateProductFrame.setClosable(true);
+        updateProductFrame.setIconifiable(true);
+        updateProductFrame.setMaximizable(true);
         updateProductFrame.setResizable(true);
         updateProductFrame.setVisible(true);
 
@@ -140,14 +195,14 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
+                .addContainerGap(161, Short.MAX_VALUE)
                 .addComponent(submitUpdate)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
+                .addContainerGap(245, Short.MAX_VALUE)
                 .addComponent(submitUpdate)
                 .addContainerGap())
         );
@@ -185,8 +240,8 @@ public class ManagerSessionUI extends javax.swing.JFrame {
                 .addComponent(productIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
-                .addComponent(updateProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(176, Short.MAX_VALUE)
+                .addComponent(updateProductFrame)
                 .addGap(32, 32, 32)
                 .addComponent(addNewProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
