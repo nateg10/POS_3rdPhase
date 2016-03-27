@@ -15,8 +15,12 @@ public class ManagerController {
     }
     
     public void updateProduct(){
+        System.out.println("balls");
+        MsUI.spawnUpdateProductWindow();
         UpdateProductUI up = new UpdateProductUI(this);
     }
+    
+    // balls balls balls
     
     
 }

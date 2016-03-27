@@ -21,8 +21,8 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         //this();
         controller = mc;
         initComponents();
-        updateProductFrame.setVisible(false);
-        addNewProductFrame.setVisible(false);
+        //updateProductFrame.setVisible(false);
+        //addNewProductFrame.setVisible(false);
     }
     
 //    private ManagerSessionUI() {
@@ -30,11 +30,11 @@ public class ManagerSessionUI extends javax.swing.JFrame {
 //    }
     
     public void spawnNewProductWindow(){
-        addNewProductFrame.setVisible(true);
+        
     }
     
     public void spawnUpdateProductWindow(){
-        updateProductFrame.setVisible(true);
+//      
     }
 
     /**
@@ -51,16 +51,6 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         newProductButton = new javax.swing.JButton();
         updateProductButton = new javax.swing.JButton();
         productIDField = new javax.swing.JTextField();
-        addNewProductFrame = new javax.swing.JInternalFrame();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jPanel2 = new javax.swing.JPanel();
-        submitNew = new javax.swing.JButton();
-        addNewProductLabel = new javax.swing.JLabel();
-        updateProductFrame = new javax.swing.JInternalFrame();
-        updateProductLabel = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
-        submitUpdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,93 +75,6 @@ public class ManagerSessionUI extends javax.swing.JFrame {
             }
         });
 
-        addNewProductFrame.setVisible(true);
-
-        submitNew.setText("Submit");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(submitNew)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
-                .addComponent(submitNew)
-                .addContainerGap())
-        );
-
-        jScrollPane2.setViewportView(jPanel2);
-
-        addNewProductLabel.setText("Add New Product");
-
-        javax.swing.GroupLayout addNewProductFrameLayout = new javax.swing.GroupLayout(addNewProductFrame.getContentPane());
-        addNewProductFrame.getContentPane().setLayout(addNewProductFrameLayout);
-        addNewProductFrameLayout.setHorizontalGroup(
-            addNewProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addNewProductFrameLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(addNewProductLabel)
-                .addGap(45, 45, 45))
-        );
-        addNewProductFrameLayout.setVerticalGroup(
-            addNewProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addNewProductFrameLayout.createSequentialGroup()
-                .addComponent(addNewProductLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
-        );
-
-        updateProductFrame.setResizable(true);
-        updateProductFrame.setVisible(true);
-
-        updateProductLabel.setText("Update Product");
-
-        submitUpdate.setText("Submit");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
-                .addComponent(submitUpdate)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
-                .addComponent(submitUpdate)
-                .addContainerGap())
-        );
-
-        jScrollPane3.setViewportView(jPanel3);
-
-        javax.swing.GroupLayout updateProductFrameLayout = new javax.swing.GroupLayout(updateProductFrame.getContentPane());
-        updateProductFrame.getContentPane().setLayout(updateProductFrameLayout);
-        updateProductFrameLayout.setHorizontalGroup(
-            updateProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(updateProductFrameLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(updateProductLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane3)
-        );
-        updateProductFrameLayout.setVerticalGroup(
-            updateProductFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(updateProductFrameLayout.createSequentialGroup()
-                .addComponent(updateProductLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3))
-        );
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -183,13 +86,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
                     .addComponent(updateProductButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(45, 45, 45)
                 .addComponent(productIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
-                .addComponent(updateProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(addNewProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,11 +98,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
                         .addComponent(newProductButton)
                         .addGap(18, 18, 18)
                         .addComponent(updateProductButton)))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(addNewProductFrame)
-                    .addComponent(updateProductFrame))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -273,20 +166,10 @@ public class ManagerSessionUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JInternalFrame addNewProductFrame;
-    private javax.swing.JLabel addNewProductLabel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton newProductButton;
     private javax.swing.JTextField productIDField;
-    private javax.swing.JButton submitNew;
-    private javax.swing.JButton submitUpdate;
     private javax.swing.JButton updateProductButton;
-    private javax.swing.JInternalFrame updateProductFrame;
-    private javax.swing.JLabel updateProductLabel;
     // End of variables declaration//GEN-END:variables
 }
