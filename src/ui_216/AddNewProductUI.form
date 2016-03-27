@@ -149,6 +149,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Submit"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addProductButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="nameField">
               <Properties>
@@ -164,25 +167,16 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="###########"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="quantityField">
               <Properties>
                 <Property name="text" type="java.lang.String" value="###########"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantityFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="priceField">
               <Properties>
                 <Property name="text" type="java.lang.String" value="$###.##"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="priceFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="taxIDField">
               <Properties>

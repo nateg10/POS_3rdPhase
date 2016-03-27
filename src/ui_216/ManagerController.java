@@ -19,9 +19,18 @@ public class ManagerController {
         anpUI = np;
     }
     
-    public void updateProduct(){
+    public void addNewProduct(String Name, String idString, String qtString, String ppuString, String taxIDString){
+        //validate and pass to session to be added to the database
+        System.out.println("Added New Product");
+    }
+    
+    public void updateProduct(String idString){
+        //validate product id
+        //int id = Integer.getInteger(idString);
+        //pass id to manager session to get product information
+        
 //        System.out.println("balls");
-        MsUI.spawnUpdateProductWindow();
+        //MsUI.spawnUpdateProductWindow();
         UpdateProductUI up = new UpdateProductUI(this);
         up.setVisible(true);
         upUI = up;

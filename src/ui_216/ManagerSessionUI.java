@@ -29,13 +29,6 @@ public class ManagerSessionUI extends javax.swing.JFrame {
 //        
 //    }
     
-    public void spawnNewProductWindow(){
-        
-    }
-    
-    public void spawnUpdateProductWindow(){
-//      
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -119,6 +112,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
 
     private void newProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newProductButtonActionPerformed
         // TODO add your handling code here:
+        controller.newProduct();
     }//GEN-LAST:event_newProductButtonActionPerformed
 
     private void productIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIDFieldActionPerformed
@@ -126,7 +120,8 @@ public class ManagerSessionUI extends javax.swing.JFrame {
     }//GEN-LAST:event_productIDFieldActionPerformed
 
     private void updateProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductButtonActionPerformed
-        controller.updateProduct();
+        String id = productIDField.getText();
+        controller.updateProduct(id);
     }//GEN-LAST:event_updateProductButtonActionPerformed
 
     /**

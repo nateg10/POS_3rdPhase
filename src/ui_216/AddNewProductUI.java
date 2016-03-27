@@ -64,31 +64,21 @@ public class AddNewProductUI extends javax.swing.JFrame {
         taxIDLabel.setText("Tax ID");
 
         addProductButton.setText("Submit");
+        addProductButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addProductButtonActionPerformed(evt);
+            }
+        });
 
         nameField.setText("Apples");
 
         jLabel1.setText("Add a New Product to the Catalog");
 
         idField.setText("###########");
-        idField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idFieldActionPerformed(evt);
-            }
-        });
 
         quantityField.setText("###########");
-        quantityField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityFieldActionPerformed(evt);
-            }
-        });
 
         priceField.setText("$###.##");
-        priceField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                priceFieldActionPerformed(evt);
-            }
-        });
 
         taxIDField.setText("##");
 
@@ -171,17 +161,16 @@ public class AddNewProductUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
+    private void addProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idFieldActionPerformed
-
-    private void quantityFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantityFieldActionPerformed
-
-    private void priceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_priceFieldActionPerformed
+        String name = nameField.getText();
+        String id = idField.getText();
+        String quantity = quantityField.getText();
+        String price = priceField.getText();
+        String taxID = taxIDField.getText();
+        
+        controller.addNewProduct(name, id, quantity, price, taxID);
+    }//GEN-LAST:event_addProductButtonActionPerformed
 
     /**
      * @param args the command line arguments
