@@ -11,11 +11,11 @@ package ui_216;
  */
 public class UpdateProductUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form UpdateProductUI
-     */
-    public UpdateProductUI() {
+    private ManagerController controller;
+    
+    public UpdateProductUI(ManagerController mc) {
         initComponents();
+        controller = mc;
     }
 
     /**
@@ -62,7 +62,7 @@ public class UpdateProductUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -89,7 +89,7 @@ public class UpdateProductUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UpdateProductUI().setVisible(true);
+                new UpdateProductUI(controller).setVisible(true);
             }
         });
     }
