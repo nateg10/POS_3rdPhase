@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ui_216;
 
-/**
- *
- * @author Owner
- */
 public class ManagerController {
+    ManagerSessionUI MsUI;
+    //Now create a manager session object
+    private boolean newProduct;
+
+    public ManagerController(){
+        MsUI = new ManagerSessionUI();
+    }
+    
+    public void newProduct(){
+        MsUI.spawnNewProductWindow();
+    }
+    
+    public void updateProduct(){
+        MsUI.spawnUpdateProductWindown();
+    }
+    
     
 }
