@@ -42,15 +42,185 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="398" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="548" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="337" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel2">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="taxIDLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ppuLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="quantityLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="idLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="nameLable" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="nameField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="idField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="quantityField" alignment="0" pref="150" max="32767" attributes="0"/>
+                                      <Component id="priceField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="taxIDField" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                                  <Component id="addProductButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="227" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="nameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="nameLable" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="idField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="quantityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="quantityField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ppuLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="priceField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="taxIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="taxIDField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="addProductButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="nameLable">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Product Name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="idLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="ID"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="quantityLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quantity"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="ppuLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Price per Unit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="taxIDLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tax ID"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="addProductButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Submit"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="nameField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Apples"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Add a New Product to the Catalog"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="idField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="###########"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="quantityField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="###########"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantityFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="priceField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="$###.##"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="priceFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="taxIDField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="##"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
