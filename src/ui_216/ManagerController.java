@@ -21,7 +21,28 @@ public class ManagerController {
     
     public void addNewProduct(String Name, String idString, String qtString, String ppuString, String taxIDString){
         //validate and pass to session to be added to the database
+        Integer temp;
+        int id, quantity, taxID;
+        if((temp = validateStringtoNumber(idString)) != null){
+            id = temp;
+        }else{
+            error("invalid ID #");
+            return;
+        }
+        
         System.out.println("Added New Product");
+        return;
+    }
+    
+    //null is a failed attempt
+    private Integer validateStringtoNumber(String input){
+        Integer output = Integer.getInteger(input);
+        return output;
+    }
+    
+    private void error(String message){
+        ErrorScreen es = new ErrorScreen(message);
+        es.setVisible(true);
     }
     
     public void updateProduct(String idString){
