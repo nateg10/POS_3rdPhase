@@ -5,6 +5,8 @@
  */
 package ui_216;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Billy
@@ -16,6 +18,7 @@ public class UpdateProductUI extends javax.swing.JFrame {
     public UpdateProductUI(ManagerController mc) {
         initComponents();
         controller = mc;
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**

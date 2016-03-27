@@ -5,6 +5,8 @@
  */
 package ui_216;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Billy
@@ -24,6 +26,7 @@ public class AddNewProductUI extends javax.swing.JFrame {
     
     private AddNewProductUI() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //will this work??
     }
 

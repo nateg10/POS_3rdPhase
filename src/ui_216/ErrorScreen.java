@@ -6,6 +6,8 @@
 package ui_216;
 
 import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -25,6 +27,7 @@ public class ErrorScreen extends javax.swing.JFrame {
     
     private ErrorScreen() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
