@@ -7,6 +7,7 @@ public class ManagerController {
 
     public ManagerController(){
         MsUI = new ManagerSessionUI(this);
+        MsUI.run();
     }
     
     public void newProduct(){
@@ -14,7 +15,7 @@ public class ManagerController {
     }
     
     public void updateProduct(){
-        MsUI.spawnUpdateProductWindown();
+        MsUI.spawnUpdateProductWindow();
     }
     
     

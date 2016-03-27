@@ -15,45 +15,26 @@ public class ManagerSessionUI extends javax.swing.JFrame {
      * Creates new form ManagerSession
      */
     
-    ManagerController controller;
+    private ManagerController controller;
     
     public ManagerSessionUI(ManagerController mc) {
-        this();
+        //this();
         controller = mc;
         initComponents();
+        updateProductFrame.setVisible(false);
+        addNewProductFrame.setVisible(false);
     }
     
-    private ManagerSessionUI() {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ManagerSessionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ManagerSessionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ManagerSessionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ManagerSessionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ManagerSessionUI().setVisible(true);
-            }
-        });
+//    private ManagerSessionUI() {
+//        
+//    }
+    
+    public void spawnNewProductWindow(){
+        addNewProductFrame.setVisible(true);
+    }
+    
+    public void spawnUpdateProductWindow(){
+        updateProductFrame.setVisible(true);
     }
 
     /**
@@ -73,11 +54,13 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         addNewProductFrame = new javax.swing.JInternalFrame();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+        submitNew = new javax.swing.JButton();
         addNewProductLabel = new javax.swing.JLabel();
         updateProductFrame = new javax.swing.JInternalFrame();
         updateProductLabel = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
+        submitUpdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +72,11 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         });
 
         updateProductButton.setText("Update Product");
+        updateProductButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateProductButtonActionPerformed(evt);
+            }
+        });
 
         productIDField.setText("Product ID");
         productIDField.addActionListener(new java.awt.event.ActionListener() {
@@ -99,15 +87,23 @@ public class ManagerSessionUI extends javax.swing.JFrame {
 
         addNewProductFrame.setVisible(true);
 
+        submitNew.setText("Submit");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 213, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(submitNew)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 218, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(209, Short.MAX_VALUE)
+                .addComponent(submitNew)
+                .addContainerGap())
         );
 
         jScrollPane2.setViewportView(jPanel2);
@@ -129,22 +125,31 @@ public class ManagerSessionUI extends javax.swing.JFrame {
             .addGroup(addNewProductFrameLayout.createSequentialGroup()
                 .addComponent(addNewProductLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
         );
 
+        updateProductFrame.setResizable(true);
         updateProductFrame.setVisible(true);
 
         updateProductLabel.setText("Update Product");
+
+        submitUpdate.setText("Submit");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 252, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(144, Short.MAX_VALUE)
+                .addComponent(submitUpdate)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 218, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(209, Short.MAX_VALUE)
+                .addComponent(submitUpdate)
+                .addContainerGap())
         );
 
         jScrollPane3.setViewportView(jPanel3);
@@ -156,7 +161,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
             .addGroup(updateProductFrameLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(updateProductLabel)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane3)
         );
         updateProductFrameLayout.setVerticalGroup(
@@ -180,9 +185,9 @@ public class ManagerSessionUI extends javax.swing.JFrame {
                 .addComponent(productIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
+                .addContainerGap(193, Short.MAX_VALUE)
                 .addComponent(updateProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
                 .addComponent(addNewProductFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
         );
@@ -209,11 +214,11 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
         );
 
         pack();
@@ -227,10 +232,14 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_productIDFieldActionPerformed
 
+    private void updateProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateProductButtonActionPerformed
+        controller.updateProduct();
+    }//GEN-LAST:event_updateProductButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -258,7 +267,7 @@ public class ManagerSessionUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ManagerSessionUI().setVisible(true);
+                new ManagerSessionUI(controller).setVisible(true);
             }
         });
     }
@@ -274,6 +283,8 @@ public class ManagerSessionUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton newProductButton;
     private javax.swing.JTextField productIDField;
+    private javax.swing.JButton submitNew;
+    private javax.swing.JButton submitUpdate;
     private javax.swing.JButton updateProductButton;
     private javax.swing.JInternalFrame updateProductFrame;
     private javax.swing.JLabel updateProductLabel;
