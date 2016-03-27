@@ -6,7 +6,7 @@ public class ManagerController {
     private boolean newProduct;
 
     public ManagerController(){
-        MsUI = new ManagerSessionUI();
+        MsUI = new ManagerSessionUI(this);
     }
     
     public void newProduct(){

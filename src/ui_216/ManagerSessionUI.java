@@ -14,8 +14,12 @@ public class ManagerSessionUI extends javax.swing.JFrame {
     /**
      * Creates new form ManagerSession
      */
-    public ManagerSessionUI(int ball) {
+    
+    ManagerController controller;
+    
+    public ManagerSessionUI(ManagerController mc) {
         this();
+        controller = mc;
         initComponents();
     }
     
